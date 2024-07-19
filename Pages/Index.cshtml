@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Calculation Page";
+}
+
+<style>
+    .header {
+        color: white;
+        background-color: #4CAF50; 
+        padding: 20px;
+        text-align: center;
+    }
+
+    .form-container {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .form-container input[type="text"] {
+        margin: 10px 0;
+        padding: 10px;
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .form-container button {
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .form-container button:hover {
+        background-color: #45a049;
+    }
+
+    .result {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+</style>
+
+<div class="header">
+    <h1 class="display-4">Calculation Page</h1>
+</div>
+
+<div class="form-container">
+    <form action="" method="post">
+        <div>
+            <input type="text" name="number1" placeholder="Enter Number 1">
+        </div>
+        <div>
+            <input type="text" name="number2" placeholder="Enter Number 2">
+        </div>
+
+        <p class="result">@ViewData["result"]</p>
+
+        <div style="margin-top: 20px;">
+            <button type="submit" name="operation" value="ADD">ADD</button>
+            <button type="submit" name="operation" value="MUL">MUL</button>
+            <button type="submit" name="operation" value="SUB">SUB</button>
+            <button type="submit" name="operation" value="DIV">DIV</button>
+            <button type="submit" name="operation" value="SQR">SQR</button>
+            <button type="submit" name="operation" value="POW">POW</button>
+        </div>
+
+    </form>
+
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
